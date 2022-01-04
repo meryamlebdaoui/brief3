@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+     <link rel="stylesheet" href="assets/css/contact.css" /> 
+     <script src="https://code.jquery.com/jquery-3.5.0.js"></script> 
+     <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <script src="assets/js/btn.js"></script> 
+  </head>
+  <body>
+    <nav class="navi" style="background-color: #e67d22a7; position: relative">
+      <div class="logo">
+        <span>RentMeNow.</span>
+      </div>
+      <label for="btn" class="icon1">
+        <span class="fa fa-bars" id="btn" onclick="display()"></span>
+      </label>
+      <ul id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" class="">Gallery</a></li>
+        <li><a href="booking.html" class="">booking</a></li>
+        <li><a class="active" href="contact.html" class="">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="contact-us">
+      <div class="lef-col-cont">
+        <div class="container-contact">
+          <div class="contact-title">CONTACT US</div>
+          <div class="contact-desc">
+            Donʼt hesitate to contact us for more information
+          </div>
+        </div>
+      </div>
+      <div class="rig-col-cont" style="background-image: url(./assets/img/3.jpg);"></div>
+    </div>
+    <div class="contact-us-cords">
+      <div class="cord">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <div class="data">
+          <div class="title-data">Location</div>
+          <div class="data-text">
+            N°4, 2nd Floor, Av el Amir Abd <br />
+            Elkader N°78 Almassira City -Agadir
+          </div>
+        </div>
+      </div>
+      <div class="cord">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <div class="data">
+          <div class="title-data">Phone</div>
+          <div class="data-text">06 42 20 36 11</div>
+        </div>
+      </div>
+      <div class="cord">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        <div class="data">
+          <div class="title-data">Our schedules</div>
+          <div class="data-text">
+            Monday to Thursday from 8:30AM to 6:30PM <br />
+            Friday from 8:30AM to 5:30PM
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-contact-us">
+      <form>
+        <div class="top-section">
+          <div class="title-form">Contact Us</div>
+          <div class="msg-form">
+            Please fill out this form to send us your requests.
+          </div>
+        </div>
+        <div class="con12">
+          <div class="conIn">
+            <input
+              style="display: block"
+              required
+              type="text"
+              name="firstName"
+              placeholder="First name"
+            />
+
+            <input required type="text" name="lastName" placeholder="Last name" />
+          </div>
+
+          <div class="conIn">
+            <input
+              type="text"
+              name="phone"
+              id="objet"
+              placeholder="Phone"
+            />
+            <input required type="email" name="email" placeholder="Email" />
+          </div>
+          <textarea
+            contenteditable="true"
+            required
+            name="message"
+            id="editor"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+        </div>
+        <button name="envoyer" type="submit" onclick="displayInfo_contact()">Send</button>
+      </form>
+    </div>
+    <div class="box-a">
+      
+    </div>
+   
+    <div class="container">
+      <footer
+        class="
+          d-flex
+          flex-wrap
+          justify-content-between
+          align-items-center
+          py-3
+          my-4
+          border-top
+        "
+      >
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="text-muted">&copy; RentMeNow 2021-2022.</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3" style="margin: 10px">
+            <a href="" class="text-muted"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li class="ms-3" style="margin: 10px">
+            <a href="" class="text-muted"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="ms-3" style="margin: 10px">
+            <a href="" class="text-muted"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="ms-3" style="margin: 10px">
+            <a href="" class="text-muted"><i class="fab fa-snapchat"></i></a>
+          </li>
+          <li class="ms-3" style="margin: 10px">
+            <a href="" class="text-muted"><i class="fab fa-youtube"></i></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="assets/js/btn.js"></script>
+  </body>
+</html>

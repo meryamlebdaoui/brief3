@@ -1,0 +1,203 @@
+body,html{
+    margin: 0;
+    padding: 0;
+  }
+  .hovering{
+    color:rgb(235, 142, 55);
+    }
+  .navi{
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon1{
+    display: none;
+}
+.navi .logo{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.navi .logo span{
+    width: 50%;
+    padding: .9em;
+    font-size: 1.8em;
+    font-family: AbrilFatface-Regular;
+    color: white;
+}
+.navi ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navi ul li{
+    list-style: none;
+}
+.navi ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+.navi ul li a.active{
+    border-bottom: 2.5px solid #e67e22;
+}
+  
+  @media(max-width:700px){
+  
+    .icon1 {
+      display: flex;
+      justify-content: right;
+      width: 100%;
+      padding: 0 30px;
+    }
+    .icon1 span {
+      font-size: 2em;
+    }
+    .navi ul {
+      position: fixed;
+      display: none;
+      top: 10%;
+      background-color: black;
+      width: 100%;
+      flex-direction: column;
+      padding: 20px;
+      z-index: 1;
+    }
+    .navi ul li {
+      margin-top: 2em;
+    }
+    .navi ul li a {
+      font-size: 2.1em;
+    }
+  
+  }
+  
+.header{
+    background-image: url('/assets/img/Background-imqge.jpg');
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+ .image{
+     background-repeat: no-repeat;
+     position: relative;
+    
+ }
+  
+.classimage{
+    position: relative;
+}
+ 
+ .content1{
+     color: white;
+     margin-left: 40px;
+     font-size: 36px;
+     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+ 
+  input[type=text], select, textarea {
+      width: 100%; 
+      padding: 12px;
+      border: 1px solid #ccc; 
+      border-radius: 4px; 
+      box-sizing: border-box; 
+      margin-top: 6px; 
+      margin-bottom: 16px; 
+      resize: vertical 
+    }
+    #day{
+      
+      height: 45px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+    }
+    .price{
+      display: flex;
+      justify-content: center;
+    }
+   
+    #price{
+      width: 90px;
+      background-color: #524848;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      margin-top: 30px;
+     
+    }
+    
+    
+    #price:hover {
+      background-color:rgb(236, 137, 44);
+    }
+    
+  
+    .formbackground {
+      width: 400px;
+      height: 599px;
+      border-radius: 18px;
+      background-color:rgb(255, 255, 255 ,0.7) ;
+      padding: 20px;
+      margin: 20px auto;
+      display: flex;
+      color: rgb(250, 250, 250); 
+    }
+  
+    .info{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      background-color: black;
+      height: 40px;
+      justify-content: center;
+      font-size: small;
+      color: rgb(255, 255, 255);
+  }
+  
+  a{
+    text-decoration: none ;
+    color: white;
+  }
+  form{
+    color: #797572;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+  }
+.parttwo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    background-image: url('/assets/img/booking.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.line{
+    margin: 20px auto;
+    width: 80%;
+    height: 4px;
+    background-color: rgb(236, 137, 44);
+}
+
+.display{
+  display: flex;
+  justify-content: center;
+  margin-top:10px;
+  margin-left: 40px;
+  width : 300px;
+  height : 50px;
+  background-color: rgb(236, 137, 44);
+  border-radius: 50px;
+}
