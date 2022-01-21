@@ -49,67 +49,70 @@
       </div>
       <div class="line"></div>
 
-      <!-- --------------------------------------------------------------- -->
-
-      <div class="parttwo">
-
-          <section class="formbackground">
-              <form>
-                  <label for="type">Type</label>
-
-                  <select id="type" name="type" onchange="vehicule()">
-                      <option id="nonetype" value="none">None</option>
-                      <option id="moto" value="Moto">Moto</option>
-                      <option id="citadine" value="Citadine">Citadine</option>
-                      <option id="compact" value="Compact">Compact</option>
-                      <option id="berline" value="Berline">Berline</option>
-                      <option id="utilitaire" value="Utilitaire">Utilitaire</option>
-                      <option id="engin" value="Engin de Chantier">Engin de Chantier</option>
-                      <option id="camoin" value="Camion">Camion</option>
-                  </select>
-
-                  <label for="gearbox">Gearbox</label>
-
-                  <select id="gearbox" name="gearbox" onchange=" grearBOX()"> </select>
-
-                  <label for="fuel">Fuel</label>
-                  <select id="fuel" name="fuel" onchange="FUEL()">
-                      
-                  </select>
-                  <div style="display: flex; flex-direction: column;">
-                      <label for="day">Day number</label>
-                      <input type="number" id="day" name="day" placeholder="Day number..">
-
-                  </div>
-
-                  
-                  <div class="price">
-                      <input type="button"  id="price" value="Price"  onclick="total()">
-                  </div>
-
-                  <div class="display">
-                      <p id="play"></p>
-                  </div>
-                 
-
-              </form>
-          </section>
-
-          
-
-      </div>
-      <div class="line"></div>
       <!------------------------------------------------------------------------------------------------------------>
+      <div class="type">
+        <img class="slide" onclick="ty(this.id)" id="Moto" value="Moto" src="assets/img/moto1.jpeg" alt="motorcycle">
+        <img class="slide" onclick="ty(this.id)" id="Compact" value="compact" src="assets/img/compacte.png" alt="compact-car">
+        <img class="slide" onclick="ty(this.id)" id="citadine" src="assets/img/citadine.png" alt="citadine-car">
+        <img class="slide" onclick="ty(this.id)" id="utilitaire" src="assets/img/utilitaire.png" alt="utilitaire-car">
+        <img class="slide" onclick="ty(this.id)" id="Berlin" src="assets/img/berlin.png" alt="berlin-car">
+        <img class="slide" onclick="ty(this.id)" id="Truck" src="assets/img/truck.png" alt="truck">
+        <img class="slide" onclick="ty(this.id)" id="cm" src="assets/img/cm.png" alt="construction-machine">
+    </div>
 
+    <!------------------------feul------------------------>
+
+    <h1>Select your fuel type</h1>
+    <form class="feul">
+        <div class="carburant">
+            <input type="radio" id="gasoline" name="radio" value="0.14" onclick="fuelP(this.value)">
+            <label for="gasoline">Gasoline</label>
+        </div>
+        <div class="carburant">
+            <input type="radio" id="diesel" name="radio" value="0.21" onclick="fuelP(this.value)">
+            <label for="diesel">Diesel</label>
+        </div>
+        <div class="carburant">
+            <input type="radio" id="electric" name="radio" value="0.05" onclick="fuelP(this.value)">
+            <label for="electric">Electric</label>
+        </div>
+        <div class="carburant">
+            <input type="radio" id="hybride" name="radio" value="0.09" onclick="fuelP(this.value)">
+            <label for="hybride">Hybride</label>
+        </div>
+    </form>
+
+    <!-----------------------gear box----------------------->
+    <h1>Select your gear box type</h1>
+    <form class="gear-box">
+        <div class="gear">
+            <input type="radio" id="manual" name="gear" value="manual">
+            <label for="manual">Manual</label>
+        </div>
+        <div class="gear">
+            <input type="radio" id="automatic" name="gear" value="automatic">
+            <label for="automatic">Automatic</label>
+        </div>
+    </form>
+
+    <!-----------------------Reservation duration----------------------->
+
+    <h1>Reservation duration</h1>
+    <div class="duration">
+        <div class="du">
+        <label for="date">Number of days</label>
+            <input type="number" id="days" min="1">
+        </div>
+        <div class="btn1">
+            <input type="submit" name="submit" value="Submit" onclick="calc()">
+        </div>
+    </div>
  
 
 
-      <script type="text/javascript" src="bookingg.js"></script>
+      <script src="assets/js/booking.js"></script>
 
-</body>
-
-
-    <div class="container">
+      <div class="container">
         <footer
           class="
             d-flex
@@ -143,5 +146,5 @@
           </ul>
         </footer>
       </div>
-    </body>
+  </body>
   </html>

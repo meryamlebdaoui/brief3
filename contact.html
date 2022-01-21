@@ -81,7 +81,7 @@
     </div>
 
     <div class="form-contact-us">
-      <form>
+      <form action="" method="get">
         <div class="top-section">
           <div class="title-form">Contact Us</div>
           <div class="msg-form">
@@ -95,32 +95,41 @@
               required
               type="text"
               name="firstName"
+              id="fname"
               placeholder="First name"
             />
 
-            <input required type="text" name="lastName" placeholder="Last name" />
+            <input required type="text" id="lname" name="lastName" placeholder="Last name" />
           </div>
 
           <div class="conIn">
             <input
               type="text"
               name="phone"
-              id="objet"
-              placeholder="Phone"
+              id="phone"
+              placeholder="Phone number"
             />
-            <input required type="email" name="email" placeholder="Email" />
+            <input required type="email" id="email" name="email" placeholder="Email" />
           </div>
           <textarea
             contenteditable="true"
             required
             name="message"
-            id="editor"
+            id="message"
             cols="30"
             rows="10"
             placeholder="Message"
           ></textarea>
         </div>
-        <button name="envoyer" type="submit" onclick="displayInfo_contact()">Send</button>
+        <button onclick="myFunction()" type="submit">Send</button>
+
+        <script>
+          function myFunction() {
+            alert(document.getElementById('fname').value +" "+document.getElementById('lname').value );
+            alert("Message done!!");
+
+          }
+        </script>
       </form>
     </div>
     <div class="box-a">

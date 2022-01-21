@@ -1,203 +1,279 @@
-body,html{
-    margin: 0;
-    padding: 0;
-  }
-  .hovering{
-    color:rgb(235, 142, 55);
-    }
-  .navi{
-    position: absolute;
-    background-color: transparent;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
-.icon1{
+.hovering {
+  color: rgb(235, 142, 55);
+}
+.navi {
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon1 {
+  display: none;
+}
+.navi .logo {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.navi .logo span {
+  width: 50%;
+  padding: 0.9em;
+  font-size: 1.8em;
+  font-family: AbrilFatface-Regular;
+  color: white;
+}
+.navi ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navi ul li {
+  list-style: none;
+}
+.navi ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+}
+.navi ul li a.active {
+  border-bottom: 2.5px solid #e67e22;
+}
+
+@media (max-width: 700px) {
+  .icon1 {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    padding: 0 30px;
+  }
+  .icon1 span {
+    font-size: 2em;
+  }
+  .navi ul {
+    position: fixed;
     display: none;
-}
-.navi .logo{
-    width: 60%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.navi .logo span{
-    width: 50%;
-    padding: .9em;
-    font-size: 1.8em;
-    font-family: AbrilFatface-Regular;
-    color: white;
-}
-.navi ul{
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.navi ul li{
-    list-style: none;
-}
-.navi ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-}
-.navi ul li a.active{
-    border-bottom: 2.5px solid #e67e22;
-}
-  
-  @media(max-width:700px){
-  
-    .icon1 {
-      display: flex;
-      justify-content: right;
-      width: 100%;
-      padding: 0 30px;
-    }
-    .icon1 span {
-      font-size: 2em;
-    }
-    .navi ul {
-      position: fixed;
-      display: none;
-      top: 10%;
-      background-color: black;
-      width: 100%;
-      flex-direction: column;
-      padding: 20px;
-      z-index: 1;
-    }
-    .navi ul li {
-      margin-top: 2em;
-    }
-    .navi ul li a {
-      font-size: 2.1em;
-    }
-  
-  }
-  
-.header{
-    background-image: url('/assets/img/Background-imqge.jpg');
-    height: 300px;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-}
-
- .image{
-     background-repeat: no-repeat;
-     position: relative;
-    
- }
-  
-.classimage{
-    position: relative;
-}
- 
- .content1{
-     color: white;
-     margin-left: 40px;
-     font-size: 36px;
-     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    }
- 
-  input[type=text], select, textarea {
-      width: 100%; 
-      padding: 12px;
-      border: 1px solid #ccc; 
-      border-radius: 4px; 
-      box-sizing: border-box; 
-      margin-top: 6px; 
-      margin-bottom: 16px; 
-      resize: vertical 
-    }
-    #day{
-      
-      height: 45px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-
-    }
-    .price{
-      display: flex;
-      justify-content: center;
-    }
-   
-    #price{
-      width: 90px;
-      background-color: #524848;
-      color: white;
-      text-align: center;
-      padding: 15px 20px;
-      border: none;
-      border-radius: 18px;
-      cursor: pointer;
-      margin-top: 30px;
-     
-    }
-    
-    
-    #price:hover {
-      background-color:rgb(236, 137, 44);
-    }
-    
-  
-    .formbackground {
-      width: 400px;
-      height: 599px;
-      border-radius: 18px;
-      background-color:rgb(255, 255, 255 ,0.7) ;
-      padding: 20px;
-      margin: 20px auto;
-      display: flex;
-      color: rgb(250, 250, 250); 
-    }
-  
-    .info{
-      width: 100%;
-      margin: auto;
-      display: flex;
-      background-color: black;
-      height: 40px;
-      justify-content: center;
-      font-size: small;
-      color: rgb(255, 255, 255);
-  }
-  
-  a{
-    text-decoration: none ;
-    color: white;
-  }
-  form{
-    color: #797572;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700;
-  }
-.parttwo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 10%;
+    background-color: black;
     width: 100%;
-    height: 700px;
-    background-image: url('/assets/img/booking.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.line{
-    margin: 20px auto;
-    width: 80%;
-    height: 4px;
-    background-color: rgb(236, 137, 44);
+    flex-direction: column;
+    padding: 20px;
+    z-index: 1;
+  }
+  .navi ul li {
+    margin-top: 2em;
+  }
+  .navi ul li a {
+    font-size: 2.1em;
+  }
 }
 
-.display{
+.header {
+  background-image: url("/assets/img/Background-imqge.jpg");
+  height: 700px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.classimage {
+  position: relative;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea {
+  width: 100%;
+}
+input[type="submit"]:hover {
+  background-color: rgb(235, 142, 55);
+}
+input[type="submit"] {
+  background-color: rgb(235, 142, 55);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="button"] {
+  background-color: rgb(235, 142, 55);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+div .btn {
+  margin-left: 50%;
+}
+
+div .btn1 {
+  margin-top: 1em;
+  width: 100%;
+}
+div .fromulaire {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+h1{
+  font-size: 1.5em;
+}
+
+/* main*/
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
+  background-position: center;
+  background-size: cover;
+}
+.main h1 {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+.button {
+  background-color: rgb(235, 142, 55);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  font-family: inherit;
+}
+
+.content1 {
+  color: white;
+  margin-left: 40px;
+  font-size: 36px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  margin-top: 30px;
+}
+
+.type img {
+  height: 230px;
+  border-radius: 25px;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+p {
+  color: #c2a859;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+}
+
+.type {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin-bottom: -20px;
+  height: 350px;
+}
+
+.type::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  display: inline-block;
+}
+
+.slide:hover {
+  height: 280px;
+  border: 5px solid rgb(235, 142, 55);
+}
+
+.feul {
+  color: rgb(235, 142, 55);
+  text-align: center;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
-  margin-top:10px;
-  margin-left: 40px;
-  width : 300px;
-  height : 50px;
-  background-color: rgb(236, 137, 44);
-  border-radius: 50px;
+  align-items: center;
+  width: 100%;
 }
+
+.carburant {
+  margin: 10px;
+}
+
+.gear-box {
+  color: rgb(235, 142, 55);
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gear {
+  margin: 50px;
+}
+
+.duration {
+  color: rgb(235, 142, 55);
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+

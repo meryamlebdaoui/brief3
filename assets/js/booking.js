@@ -1,115 +1,92 @@
-var price = 0;
+var type,basePrice,fuel,tranPrice = 0,total;
+var days = document.getElementById("days");
 
-function vehicule() {
 
-    var type = document.querySelector("#type").value;
+function ty(e) {
+    type = e;
+    var a=document.getElementsByName('radio');
+    for(var i=0;i<a.length;i++){
+        a[i].disabled = true;
+    }
+
+
+    var b=document.getElementsByName('gear');
+    for(var i=0;i<b.length;i++){
+        b[i].disabled = true;
+    }
+
 
     switch (type) {
+        case "Moto": document.querySelector("#gasoline").disabled = false;
+                     document.querySelector("#electric").disabled = false;
+                     basePrice = 10;
+        break;
+        
 
-        case "Moto":
-            price = 10
-            document.getElementById("gearbox").innerHTML = "<option> ------ </option>";
-            document.getElementById("fuel").innerHTML = "<option> Gasoline </option> <option> Electric </option>";
-            break;
-
-        case "Citadine": 
-            price = 12
-            document.getElementById("gearbox").innerHTML = "<option> Manual </option>";
-            document.getElementById("fuel").innerHTML = "<option> Gasoline </option> <option> Diesel </option> <option> Electric </option> <option> Hybride </option>";
-            break;
-
-        case "Compact": 
-            price = 14
-            document.getElementById("gearbox").innerHTML = "<option> Manual </option>";
-            document.getElementById("fuel").innerHTML = "<option> Gasoline </option> <option> Hybride </option> <option> Diesel </option>";
-            break;
-case "Berline": 
-            price = 20
-            document.getElementById("gearbox").innerHTML = "<option> Automatic </option>";
-            document.getElementById("fuel").innerHTML = "<option> Gasoline </option> <option> Hybride </option> <option> Diesel </option>";
-            break;
-
-        case "Utilitaire": 
-            price = 16
-            document.getElementById("gearbox").innerHTML = "<option> Manual </option>";
-            document.getElementById("fuel").innerHTML = "<option> Diesel </option>";
-            break;
-
-        case "Engin de Chantier": 
-            price = 900
-            document.getElementById("gearbox").innerHTML = "<option> Manual </option>";
-            document.getElementById("fuel").innerHTML = "<option> Gasoline </option> <option> Diesel </option>";
-            break;
-
-        case "Camion": 
-            price = 250;
-            document.getElementById("gearbox").innerHTML = "<option> Automatic </option>";
-            document.getElementById("fuel").innerHTML = "<option> Diesel </option>";
-            break;
-
-        default: 
-            document.getElementById("gearbox").innerHTML = "<option> </option>";
-            document.getElementById("fuel").innerHTML = "<option> </option>";
-    }
-
-
-}
-var gearBox1 = 0
-var gearbox = document.getElementById("gearbox")
-
-function grearBOX(){
-    switch (gearbox.value.toLowerCase()) {
-
-        case "Manual": 
-        gearBox1 = 0;
+        case "Compact": document.querySelector("#manual").disabled = false;
+                        document.querySelector("#manual").checked = true;
+                        document.querySelector("#hybride").disabled = false;
+                        document.querySelector("#gasoline").disabled = false;
+                        document.querySelector("#diesel").disabled = false;
+                        basePrice = 14;
         break;
 
-        case "Automatic": 
-        gearBox1 = 0.19;
+
+        case "citadine": document.querySelector("#manual").disabled = false;
+                         document.querySelector("#manual").checked = true;
+                         document.querySelector("#electric").disabled = false;
+                         document.querySelector("#hybride").disabled = false;
+                         document.querySelector("#gasoline").disabled = false;
+                         document.querySelector("#diesel").disabled = false;
+                         basePrice = 12;
         break;
 
-        default : ;
+
+        case "utilitaire": document.querySelector("#manual").disabled = false;
+                           document.querySelector("#diesel").disabled = false;
+                           document.querySelector("#manual").checked = false;
+                           document.querySelector("#diesel").checked = false;
+                           basePrice = 16;
+        break;
+
+        case "Berlin": document.querySelector("#automatic").disabled = false;
+                       document.querySelector("#automatic").checked = true;
+                       document.querySelector("#hybride").disabled = false;
+                       document.querySelector("#gasoline").disabled = false;
+                       document.querySelector("#diesel").disabled = false;
+
+                       basePrice = 20;
+                       tranPrice = 0.19;
+        break;
+
+        case "truck": document.querySelector("#automatic").disabled = false;
+                      document.querySelector("#diesel").disabled = false;
+                      document.querySelector("#automatic").checked = true;
+                      document.querySelector("#diesel").checked = false;
+                      basePrice = 250;
+                      tranPrice = 0.19;
+        break;
+
+        case "cm": document.querySelector("#manual").disabled = false;
+                   document.querySelector("#manual").checked = false;
+                   document.querySelector("#diesel").disabled = false;
+                   document.querySelector("#gasoline").disabled = false;
+                   basePrice = 900;
+                   
+        break;
+        
     }
 
+
 }
-var fuel1 = 0;
-var fuel = document.getElementById("fuel");
-
-
-function FUEL() {
-
-    switch (fuel.value.toLowerCase()) {
-
-        case "Electric": 
-            fuel1 = 0.05;
-            break;
-
-        case "Hybride": 
-            fuel1 = 0.09;
-            break;
-
-        case "Gasoline": 
-            fuel1 = 0.14;
-            break;
-
-        case "Diesel": 
-            fuel1 = 0.21;
-            break;
-
-        default : ;
-
-
-    }
+function fuelP(e) {
+    fuel = e;
 
 }
 
-var calcul = 0;
-
-function total() {
-
-    var day= document.getElementById("day").value;
-    calcul = day * (price + (price * fuel1) + (price * gearBox1));
-    var new_calcul = parseFloat(calcul).toFixed(2)
-    document.getElementById("play").innerText = new_calcul+'€';
-
+function calc(){
+    total = (basePrice + ( basePrice * fuel) + (basePrice * tranPrice))*days.value;
+    alert(total);
+    console.log(total);
 }
+
