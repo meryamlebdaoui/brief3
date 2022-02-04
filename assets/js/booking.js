@@ -85,8 +85,14 @@ function fuelP(e) {
 }
 
 function calc(){
-    total = (basePrice + ( basePrice * fuel) + (basePrice * tranPrice))*days.value;
-    alert(total);
-    console.log(total);
+    if(days.value > 0) {
+        total = (basePrice + ( basePrice * fuel) + (basePrice * tranPrice))*days.value;
+        alert(total);
+        console.log(total);
+    }
+    else {
+        alert("Enter a positive number");
+    }
+    
 }
 
