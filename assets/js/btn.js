@@ -3,7 +3,7 @@ function display(){
     var x = window.matchMedia("(max-width: 790px)")
     if (x.matches) {
         if (event.style.display == 'none') {
-            event.style.display="block";
+            event.style.display="flex";
         }else {
             event.style.display = 'none';
         }
