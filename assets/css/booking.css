@@ -48,35 +48,6 @@ html {
   border-bottom: 2.5px solid #e67e22;
 }
 
-@media (max-width: 700px) {
-  .icon1 {
-    display: flex;
-    justify-content: right;
-    width: 100%;
-    padding: 0 30px;
-  }
-  .icon1 span {
-    font-size: 2em;
-  }
-  .navi ul {
-    position: fixed;
-    display: none;
-    top: 10%;
-    background-color: black;
-    width: 100%;
-    flex-direction: column;
-    padding: 20px;
-    z-index: 1;
-    font-size: 12px;
-  }
-  .navi ul li {
-    margin-top: 2em;
-  }
-  .navi ul li a {
-    font-size: 1rem;
-  }
-}
-
 .header {
   background-image: url("/assets/img/Background-imqge.jpg");
   height: 700px;
@@ -234,7 +205,7 @@ p {
 }
 
 .slide:hover {
-  height: 280px;
+  height: 240px;
   border: 5px solid rgb(235, 142, 55);
 }
 
@@ -275,5 +246,42 @@ p {
   align-items: center;
   flex-direction: column;
   width: 100%;
+}
+
+
+@media (max-width: 700px) {
+  .icon1 {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    padding: 0 30px;
+  }
+  .icon1 span {
+    font-size: 2em;
+  }
+  .navi ul {
+    position: fixed;
+    display: none;
+    top: 10%;
+    background-color: black;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 1;
+    font-size: 12px;
+  }
+  .navi ul li {
+    margin-top: 2em;
+  }
+  .navi ul li a {
+    font-size: 1rem;
+  }
+  .type img {
+    width: 350px;
+    height: 200px;
+    border-radius: 25px;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
 }
 
