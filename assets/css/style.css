@@ -141,7 +141,7 @@ body{
     background-color: black;
 }
 
-@media (max-width: 786px){
+@media (max-width: 700px){
     .top .content .text {
         color: white;
         font-size: 3em;
